@@ -214,7 +214,8 @@ The user can:
 
 Displays the project welcome message after power-up.
 
-![Power ON Screen](images/power_on.jpg)
+<img width="1280" height="720" alt="WhatsApp Image 2026-06-07 at 12 10 05 AM" src="https://github.com/user-attachments/assets/daf1971f-77af-4ed8-bfc1-9431d4edfbed" />
+
 
 ---
 
