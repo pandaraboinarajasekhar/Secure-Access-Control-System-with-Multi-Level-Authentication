@@ -196,7 +196,8 @@ The user can:
 
 ### 📊 1. System Block Diagram
 
-<img width="651" height="453" alt="image" src="https://github.com/user-attachments/assets/add14875-c911-4556-8734-f1ba5f9e0128" />
+<img width="1537" height="1023" alt="image" src="https://github.com/user-attachments/assets/910a83a6-ceb5-42ab-943b-9b12675abf1d" />
+
 
 
 ---
