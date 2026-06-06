@@ -70,7 +70,8 @@ The following components are used in this project:
 
 ### System Block Diagram
 
-![System Architecture](images/system_architecture.png)
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/401b76d0-0e4b-4236-beaf-935c62c5af70" />
+
 
 The system consists of:
 
