@@ -1,502 +1,372 @@
-# Secure Access Control System with Multi-Level Authentication
+# 🔐 SECURE ACCESS CONTROL SYSTEM WITH MULTI-LEVEL AUTHENTICATION
 
-## 📌 Project Title
-Secure Access Control System with Multi-Level Authentication
+## 📖 Project Overview
 
----
+The **Secure Access Control System with Multi-Level Authentication** is an embedded security project designed to provide enhanced access control using multiple layers of authentication. The system verifies users through **User ID**, **Password**, and **Fingerprint Authentication** before granting access.
 
-## 📖 Description
+The project utilizes an **LPC2148 microcontroller**, **R305 fingerprint sensor**, **EEPROM**, **LCD**, and **keypad** to implement a reliable and secure access mechanism. A **DC motor** is used to simulate the door locking and unlocking process.
 
-The Secure Access Control System is an embedded security project designed to provide highly secure access using a three-level authentication mechanism. The system verifies a user through:
-
-1. User ID Verification
-2. Password Verification
-3. Fingerprint Verification
-
-Access is granted only when all three authentication levels are successfully verified. This approach provides better security, reliability, and accuracy than traditional single-level authentication systems.
+This system improves security by ensuring that access is granted only after successful completion of all authentication levels.
 
 ---
 
-## 🎯 Aim
+## 🎯 Aim of the Project
 
-To design and develop a secure access control system that prevents unauthorized access by implementing multi-level authentication using User ID, Password, and Fingerprint verification.
+The main aim of this project is to develop a secure access control system that prevents unauthorized entry through multi-level user authentication.
+
+The system validates:
+
+* User ID
+* Password
+* Fingerprint
+
+Only after successful verification of all three levels is access granted.
+
+---
+
+## ✨ Features
+
+* Multi-Level Authentication
+* User ID Verification
+* Password Verification
+* Fingerprint Authentication
+* EEPROM-Based Password Storage
+* Password Modification Function
+* Fingerprint Enrollment
+* Fingerprint Deletion
+* LCD-Based User Interface
+* Keypad-Based User Input
+* Interrupt-Based Configuration Menu
+* DC Motor Controlled Door Access
+* Real-Time Authentication Status Display
 
 ---
 
 ## 🔧 Hardware Requirements
 
-- LPC2148 Microcontroller
-- R305 Fingerprint Module
-- LCD Display
-- AT25C256 EEPROM
-- 4x4 Keypad
-- Push Button Switch
-- L293D Motor Driver IC
-- DC Motor
-- USB-to-UART Converter
+The following components are used in this project:
+
+* LPC2148 Microcontroller
+* R305 Fingerprint Sensor
+* LCD Display
+* AT25C256 EEPROM
+* 4x4 Matrix Keypad
+* Push Button Switch
+* L293D Motor Driver
+* DC Motor
+* USB-to-UART Converter
 
 ---
 
 ## 💻 Software Requirements
 
-- Embedded C
-- Keil µVision IDE
-- Flash Magic
-- Fingerprint Module Utility Software
+* Embedded C Programming
+* Keil µVision IDE
+* Flash Magic
 
 ---
 
-## 🏗 System Architecture
+## 🏗️ System Architecture
 
-### Authentication Levels
+### System Block Diagram
 
-#### Level 1: User ID Verification
-The user enters a valid User ID through the keypad.
+![System Architecture](images/system_architecture.png)
 
-#### Level 2: Password Verification
-The user enters a password through the keypad. The entered password is compared with the password stored in EEPROM.
+The system consists of:
 
-#### Level 3: Fingerprint Verification
-The fingerprint is scanned using the R305 fingerprint sensor and compared with the stored fingerprint template.
+* LPC2148 Controller
+* Fingerprint Sensor
+* EEPROM
+* LCD Display
+* Keypad
+* Motor Driver
+* DC Motor
 
-Only when all three levels are successfully verified is access granted.
+All authentication and control operations are managed by the LPC2148 microcontroller.
 
 ---
 
-## 🔄 Working Principle
+## ⚙️ Working Principle
 
-### Step 1: User ID Entry
-The system waits for the user to enter a valid User ID using the keypad.
+The system operates using a three-level authentication process.
+
+### Step 1: User ID Verification
+
+After power-up, the system waits for a valid User ID entry through the keypad.
+
+If a valid User ID is entered, the system proceeds to password verification.
+
+---
 
 ### Step 2: Password Verification
-- User enters password.
-- Password is stored in an array.
-- Stored password is read from EEPROM.
-- Both passwords are compared.
 
-If matched, the system proceeds to fingerprint verification.
+The user enters a password using the keypad.
+
+The system:
+
+* Reads the stored password from EEPROM.
+* Compares it with the entered password.
+* Proceeds to fingerprint verification if matched.
+
+If the password is incorrect, access is denied.
+
+---
 
 ### Step 3: Fingerprint Verification
-- Finger image is captured.
-- Character file is generated.
-- Fingerprint library is searched.
-- Matching template is verified.
 
-If the fingerprint matches, access is granted.
+The R305 fingerprint sensor performs:
+
+* Finger detection
+* Image capture
+* Character file generation
+* Template matching
+
+The fingerprint is compared with stored templates in the fingerprint database.
+
+If matched, access is granted.
 
 ---
 
-## 🔐 Password Modification
+### Step 4: Door Control
 
-Using External Interrupt 0, the user can select:
+After successful authentication:
 
+* DC Motor rotates forward.
+* Door opens.
+* LCD displays "ACCESS GRANTED".
+
+If authentication fails:
+
+* DC Motor remains locked or rotates reverse.
+* LCD displays "ACCESS DENIED".
+
+---
+
+## 🔐 Interrupt-Based User Configuration
+
+When the external interrupt button is pressed, the system enters configuration mode.
+
+### Menu Options
+
+```text
 1. Edit Password
 2. Edit Fingerprint
+```
 
-### Edit Password Process
-
-1. Enter current password.
-2. Verify current password.
-3. Enter new password.
-4. Confirm new password.
-5. If both passwords match:
-   - Save new password into EEPROM.
-6. Otherwise:
-   - Old password remains unchanged.
+The user can navigate using the keypad.
 
 ---
 
-## 👆 Fingerprint Management
+### Password Modification
 
-### Enroll Fingerprint
+The user can:
 
-1. Detect finger.
-2. Capture fingerprint image.
-3. Generate character file.
-4. Store template in fingerprint memory.
+* Enter current password
+* Enter new password
+* Confirm new password
 
-### Delete Fingerprint
+If both passwords match:
 
-Delete a specified fingerprint ID from the fingerprint module memory.
+* New password is stored in EEPROM.
 
-### Search Fingerprint
+Otherwise:
 
-1. Capture fingerprint image.
-2. Generate character file.
-3. Search fingerprint library.
-4. Verify matching fingerprint ID.
+* Previous password remains unchanged.
 
 ---
 
-## 🚪 Door Control System
+### Fingerprint Management
 
-A DC motor is used to simulate door movement.
+The user can:
 
-### Access Granted
-- Motor rotates forward.
-- Door opens automatically.
+#### Enroll Fingerprint
 
-### Access Denied
-- Motor rotates in reverse direction.
-- Door remains closed or locked.
+* Capture fingerprint image
+* Generate template
+* Store template in sensor memory
 
----
+#### Delete Fingerprint
+
+* Remove stored fingerprint IDs
+
 ---
 
 ## 🖼️ Project Images
 
-### 1. System Architecture / Block Diagram
+### 📊 1. System Block Diagram
 
-Add the complete system architecture showing:
-
-- LPC2148 Microcontroller
-- R305 Fingerprint Module
-- LCD Display
-- 4x4 Keypad
-- EEPROM (AT25C256)
-- L293D Motor Driver
-- DC Motor
-- External Interrupt Switch
-
-<img width="168" height="299" alt="image" src="https://github.com/user-attachments/assets/a343a0c2-4fb3-49dd-a860-46ef1b1d7347" />
-
+![System Block Diagram](images/system_architecture.png)
 
 ---
 
-### 2. Power ON Display
-
-Display shown immediately after powering the system.
-
-![Power ON Screen](images/power_on_screen.jpg)
-
-**Example LCD Output**
-
-```text
-SECURE ACCESS
-CONTROL SYSTEM
-```
-
----
-
-### 3. User ID Entry Screen
-
-System waiting for User ID.
-
-![User ID Screen](images/user_id_entry.jpg)
-
-**Example LCD Output**
-
-```text
-ENTER USER ID
-_
-```
-
----
-
-### 4. Password Entry Screen
-
-Password authentication screen.
-
-![Password Entry](images/password_entry.jpg)
-
-**Example LCD Output**
-
-```text
-ENTER PASSWORD
-****
-```
-
----
-
-### 5. External Interrupt Menu
-
-Displayed when External Interrupt (INT0) is pressed.
-
-![Interrupt Menu](images/interrupt_menu.jpg)
-
-**Example LCD Output**
-
-```text
-1. EDIT PASS
-2. EDIT FP
-```
-
----
-
-### 6. Password Update Screen
-
-Password modification process.
-
-![Password Update](images/password_update.jpg)
-
-**Example LCD Output**
-
-```text
-NEW PASSWORD
-****
-```
-
----
-
-### 7. Fingerprint Enrollment Screen
-
-Fingerprint registration process.
-
-![Fingerprint Enroll](images/fingerprint_enroll.jpg)
-
-**Example LCD Output**
-
-```text
-PLACE FINGER
-FOR ENROLL
-```
-
----
-
-### 8. Fingerprint Verification Screen
-
-Fingerprint authentication process.
-
-![Fingerprint Verification](images/fingerprint_verify.jpg)
-
-**Example LCD Output**
-
-```text
-PLACE FINGER
-FOR VERIFY
-```
-
----
-
-### 9. Access Granted / Door Open
-
-Displayed when all authentication levels are successful.
-
-![Door Open](images/access_granted.jpg)
-
-**Example LCD Output**
-
-```text
-ACCESS GRANTED
-DOOR OPENED
-```
-
-Motor rotates forward.
-
----
-
-### 10. Access Denied / Door Closed
-
-Displayed when authentication fails.
-
-![Door Closed](images/access_denied.jpg)
-
-**Example LCD Output**
-
-```text
-ACCESS DENIED
-DOOR CLOSED
-```
-
-Motor rotates reverse.
-
----
-
-### 11. Fingerprint Match Screen
-
-Successful fingerprint verification.
-
-![Fingerprint Match](images/fingerprint_match.jpg)
-
-**Example LCD Output**
-
-```text
-FINGERPRINT
-MATCHED
-```
-
----
-
-### 12. Fingerprint Not Matched Screen
-
-Fingerprint verification failure.
-
-![Fingerprint Not Matched](images/fingerprint_not_matched.jpg)
-
-**Example LCD Output**
-
-```text
-FINGERPRINT
-NOT MATCHED
-```
-
----
-
-### 13. Complete Hardware Setup
-
-Final hardware implementation.
+### 🔌 2. Hardware Setup
 
 ![Hardware Setup](images/hardware_setup.jpg)
 
-Components:
-- LPC2148 Development Board
-- R305 Fingerprint Module
-- LCD Display
-- Keypad
-- EEPROM
-- L293D Driver
-- DC Motor
-- Power Supply
+---
+
+### 📟 3. Power ON Screen
+
+Displays the project welcome message after power-up.
+
+![Power ON Screen](images/power_on.jpg)
 
 ---
 
----
+### 📟 4. User ID Entry Screen
 
-## 🧪 Module Testing Procedure
+System waiting for User ID.
 
-### LCD Testing
-- Display character constants.
-- Display strings.
-- Display integer values.
-
-### Keypad Testing
-- Read key values.
-- Display pressed keys on LCD.
-
-### EEPROM Testing
-- Write data into EEPROM.
-- Read data from EEPROM.
-- Display data on LCD.
-
-### UART Testing
-- Transmit characters.
-- Transmit strings.
-- Receive strings using UART Interrupts.
-
-### Fingerprint Module Testing
-- Connect R305 to USB-UART converter.
-- Verify module functionality.
-- Test enrollment and search operations.
+![User ID Entry](images/user_id_entry.jpg)
 
 ---
 
-## 📋 Fingerprint Enrollment Process
+### 🔑 5. Password Entry Screen
 
-### Enrollment Steps
+Password authentication screen.
 
-1. Capture fingerprint image.
-2. Store image in ImageBuffer.
-3. Generate character file.
-4. Store in CharBuffer1 or CharBuffer2.
-5. Store template in flash library.
+![Password Screen](images/password_entry.jpg)
 
 ---
 
-## 🔍 Fingerprint Search Process
+### ⚙️ 6. Interrupt Configuration Menu
 
-### Search Steps
+Displayed when External Interrupt is pressed.
 
-1. Capture fingerprint image.
-2. Generate character file.
-3. Search entire fingerprint database.
-4. Verify matching fingerprint ID.
+![Interrupt Menu](images/interrupt_menu.jpg)
 
 ---
 
-## 📟 Expected Output
+### 👆 7. Fingerprint Enrollment
 
-### Successful Authentication
+Fingerprint registration process.
 
-```text
-Enter User ID:
-1234
-
-Enter Password:
-****
-
-Fingerprint Matched
-
-ACCESS GRANTED
-DOOR OPENED
-```
-
-### Failed Authentication
-
-```text
-Enter User ID:
-1234
-
-Enter Password:
-****
-
-Fingerprint Not Matched
-
-ACCESS DENIED
-DOOR LOCKED
-```
+![Fingerprint Enrollment](images/fingerprint_enroll.jpg)
 
 ---
 
-## 🌟 Features
+### 🔍 8. Fingerprint Verification
 
-- Three-Level Authentication
-- User ID Verification
-- Password Authentication
-- Fingerprint Authentication
-- EEPROM-Based Password Storage
-- LCD User Interface
-- Fingerprint Enrollment and Deletion
-- Secure Access Control
-- DC Motor-Based Door Control
-- Embedded C Implementation
+Fingerprint matching process.
+
+![Fingerprint Verification](images/fingerprint_verify.jpg)
 
 ---
 
-## 🚀 Applications
+### 🚪 9. Access Granted
 
-- Smart Door Lock Systems
-- Office Security Systems
-- Restricted Area Access Control
-- Laboratory Security
-- Industrial Security Systems
-- Attendance Monitoring Systems
-- Biometric Authentication Systems
+Successful authentication.
+
+![Access Granted](images/access_granted.jpg)
 
 ---
 
-## 🔮 Future Enhancements
+### 🚫 10. Access Denied
 
-- RFID Authentication
-- GSM Alert Notifications
-- Wi-Fi Connectivity
-- IoT-Based Monitoring
-- Mobile Application Integration
-- Face Recognition System
-- Cloud Database Support
+Authentication failure.
+
+![Access Denied](images/access_denied.jpg)
 
 ---
 
-## 📚 Technologies Used
+## 🚀 How to Run the Project
 
-- Embedded C
-- LPC2148 ARM7 Microcontroller
-- UART Communication
-- EEPROM Memory Interface
-- Fingerprint Recognition Technology
-- LCD Interfacing
-- Keypad Interfacing
-- DC Motor Control
+### 1. Create Project Folder
+
+Create a project folder and add all source files.
+
+---
+
+### 2. Verify LCD Module
+
+Check:
+
+* Character display
+* String display
+* Integer display
+
+---
+
+### 3. Verify Keypad Module
+
+Display pressed keys on LCD.
+
+---
+
+### 4. Verify EEPROM
+
+Test:
+
+* EEPROM Write
+* EEPROM Read
+
+Display data on LCD.
+
+---
+
+### 5. Verify UART Communication
+
+Test UART transmission and reception using interrupts.
+
+---
+
+### 6. Verify Fingerprint Module
+
+Connect R305 through USB-to-UART converter.
+
+Test:
+
+* Fingerprint Enrollment
+* Fingerprint Search
+* Fingerprint Delete
+
+---
+
+### 7. Integrate All Modules
+
+Initialize:
+
+* LCD
+* Keypad
+* EEPROM
+* UART
+* Fingerprint Sensor
+* DC Motor
+
+---
+
+### 8. Build and Flash
+
+Compile using **Keil µVision**.
+
+Generate HEX file and flash using **Flash Magic**.
+
+---
+
+## 🌍 Applications
+
+* Smart Door Lock Systems
+* Office Security Systems
+* Laboratory Access Control
+* Restricted Area Security
+* Attendance Systems
+* Industrial Access Management
+
+---
+
+## 🔮 Future Improvements
+
+* RFID Authentication
+* GSM Alerts
+* IoT-Based Remote Monitoring
+* Mobile App Integration
+* Face Recognition
+* Cloud-Based Access Logs
 
 ---
 
 ## 👨‍💻 Author
 
-**Rajasekhar Pandaraboina**  
-B.Tech – Electronics and Communication Engineering (ECE)  
-Chalapathi Institute of Engineering and Technology
+**Rajasekhar Pandaraboina**
 
 ---
-
-## ✅ Conclusion
-
-The Secure Access Control System with Multi-Level Authentication provides enhanced security by combining User ID, Password, and Fingerprint verification. The system ensures that only authorized users can gain access, making it suitable for secure environments where high reliability and security are required.
