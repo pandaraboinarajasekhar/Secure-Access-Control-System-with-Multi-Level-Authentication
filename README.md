@@ -141,27 +141,213 @@ A DC motor is used to simulate door movement.
 - Door remains closed or locked.
 
 ---
+---
 
-## 📂 Project Structure
+## 🖼️ Project Images
+
+### 1. System Architecture / Block Diagram
+
+Add the complete system architecture showing:
+
+- LPC2148 Microcontroller
+- R305 Fingerprint Module
+- LCD Display
+- 4x4 Keypad
+- EEPROM (AT25C256)
+- L293D Motor Driver
+- DC Motor
+- External Interrupt Switch
+
+![System Architecture](images/system_architecture.png)
+
+---
+
+### 2. Power ON Display
+
+Display shown immediately after powering the system.
+
+![Power ON Screen](images/power_on_screen.jpg)
+
+**Example LCD Output**
 
 ```text
-Project
-│
-├── projectmain.c
-├── lcd.c
-├── lcd.h
-├── keypad.c
-├── keypad.h
-├── uart.c
-├── uart.h
-├── i2c.c
-├── i2c.h
-├── delay.c
-├── delay.h
-├── fingerprint.c
-├── fingerprint.h
-└── EEPROM Functions
+SECURE ACCESS
+CONTROL SYSTEM
 ```
+
+---
+
+### 3. User ID Entry Screen
+
+System waiting for User ID.
+
+![User ID Screen](images/user_id_entry.jpg)
+
+**Example LCD Output**
+
+```text
+ENTER USER ID
+_
+```
+
+---
+
+### 4. Password Entry Screen
+
+Password authentication screen.
+
+![Password Entry](images/password_entry.jpg)
+
+**Example LCD Output**
+
+```text
+ENTER PASSWORD
+****
+```
+
+---
+
+### 5. External Interrupt Menu
+
+Displayed when External Interrupt (INT0) is pressed.
+
+![Interrupt Menu](images/interrupt_menu.jpg)
+
+**Example LCD Output**
+
+```text
+1. EDIT PASS
+2. EDIT FP
+```
+
+---
+
+### 6. Password Update Screen
+
+Password modification process.
+
+![Password Update](images/password_update.jpg)
+
+**Example LCD Output**
+
+```text
+NEW PASSWORD
+****
+```
+
+---
+
+### 7. Fingerprint Enrollment Screen
+
+Fingerprint registration process.
+
+![Fingerprint Enroll](images/fingerprint_enroll.jpg)
+
+**Example LCD Output**
+
+```text
+PLACE FINGER
+FOR ENROLL
+```
+
+---
+
+### 8. Fingerprint Verification Screen
+
+Fingerprint authentication process.
+
+![Fingerprint Verification](images/fingerprint_verify.jpg)
+
+**Example LCD Output**
+
+```text
+PLACE FINGER
+FOR VERIFY
+```
+
+---
+
+### 9. Access Granted / Door Open
+
+Displayed when all authentication levels are successful.
+
+![Door Open](images/access_granted.jpg)
+
+**Example LCD Output**
+
+```text
+ACCESS GRANTED
+DOOR OPENED
+```
+
+Motor rotates forward.
+
+---
+
+### 10. Access Denied / Door Closed
+
+Displayed when authentication fails.
+
+![Door Closed](images/access_denied.jpg)
+
+**Example LCD Output**
+
+```text
+ACCESS DENIED
+DOOR CLOSED
+```
+
+Motor rotates reverse.
+
+---
+
+### 11. Fingerprint Match Screen
+
+Successful fingerprint verification.
+
+![Fingerprint Match](images/fingerprint_match.jpg)
+
+**Example LCD Output**
+
+```text
+FINGERPRINT
+MATCHED
+```
+
+---
+
+### 12. Fingerprint Not Matched Screen
+
+Fingerprint verification failure.
+
+![Fingerprint Not Matched](images/fingerprint_not_matched.jpg)
+
+**Example LCD Output**
+
+```text
+FINGERPRINT
+NOT MATCHED
+```
+
+---
+
+### 13. Complete Hardware Setup
+
+Final hardware implementation.
+
+![Hardware Setup](images/hardware_setup.jpg)
+
+Components:
+- LPC2148 Development Board
+- R305 Fingerprint Module
+- LCD Display
+- Keypad
+- EEPROM
+- L293D Driver
+- DC Motor
+- Power Supply
+
+---
 
 ---
 
