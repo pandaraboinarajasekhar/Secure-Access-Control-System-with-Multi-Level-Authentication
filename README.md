@@ -204,7 +204,8 @@ The user can:
 
 ### 🔌 2. Hardware Setup
 
-<img width="856" height="1546" alt="WhatsApp Image 2026-06-07 at 12 05 39 AM" src="https://github.com/user-attachments/assets/5ba1a88f-abd1-4f00-b7c6-5d3f19ce03e5" />
+<img width="1546" height="856" alt="WhatsApp Image 2026-06-07 at 12 08 13 AM" src="https://github.com/user-attachments/assets/e7165eb7-ac67-45d8-bfb7-2d33337b754b" />
+
 
 
 ---
