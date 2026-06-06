@@ -158,7 +158,8 @@ Add the complete system architecture showing:
 - DC Motor
 - External Interrupt Switch
 
-![System Architecture](images/system_architecture.png)
+<img width="168" height="299" alt="image" src="https://github.com/user-attachments/assets/a343a0c2-4fb3-49dd-a860-46ef1b1d7347" />
+
 
 ---
 
