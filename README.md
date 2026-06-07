@@ -223,7 +223,8 @@ Displays the project welcome message after power-up.
 
 System waiting for User ID.
 
-![User ID Entry](images/user_id_entry.jpg)
+<img width="1448" height="1086" alt="image" src="https://github.com/user-attachments/assets/3f93d65c-7335-42fd-bef6-89182a7b4c17" />
+
 
 ---
 
@@ -231,7 +232,8 @@ System waiting for User ID.
 
 Password authentication screen.
 
-![Password Screen](images/password_entry.jpg)
+<img width="1448" height="1086" alt="image" src="https://github.com/user-attachments/assets/1c87a5a5-d507-492e-9e38-cc8c11f9b25a" />
+
 
 ---
 
@@ -239,7 +241,8 @@ Password authentication screen.
 
 Displayed when External Interrupt is pressed.
 
-![Interrupt Menu](images/interrupt_menu.jpg)
+<img width="4000" height="2250" alt="WhatsApp Image 2026-06-07 at 4 05 07 PM" src="https://github.com/user-attachments/assets/dc358387-d709-4ca9-94ca-d9e844cc1e85" />
+
 
 ---
 
