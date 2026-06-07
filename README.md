@@ -214,7 +214,8 @@ The user can:
 
 Displays the project welcome message after power-up.
 
-<img width="1600" height="900" alt="WhatsApp Image 2026-06-07 at 5 29 11 PM" src="https://github.com/user-attachments/assets/136b31d6-c97d-46c9-8f51-36cd84ac78db" />
+<img width="1599" height="899" alt="WhatsApp Image 2026-06-07 at 5 31 03 PM" src="https://github.com/user-attachments/assets/14df9e91-036f-45a1-8c76-d76e1a974d94" />
+
 
 This screen is displayed immediately after the system is powered ON. It indicates that the LPC2148 microcontroller has successfully initialized all peripherals and that the Secure Access Control System is ready for authentication.
 
