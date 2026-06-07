@@ -224,8 +224,9 @@ This screen is displayed immediately after the system is powered ON. It indicate
 
 System waiting for User ID.
 
-<img width="1280" height="720" alt="WhatsApp Image 2026-06-07 at 4 09 02 PM" src="https://github.com/user-attachments/assets/3f953054-ca54-459a-ac7d-632e6bd1d7f0" />
+<img width="1836" height="857" alt="image" src="https://github.com/user-attachments/assets/c031d602-cda7-4d47-ad55-4573b3c8c4da" />
 
+The system prompts the user to enter a valid User ID through the keypad as the first level of authentication. The entered ID is verified before proceeding to the password authentication stage. This step helps ensure that only registered users can access the system.
 
 
 ---
@@ -234,8 +235,9 @@ System waiting for User ID.
 
 Password authentication screen.
 
-<img width="1280" height="720" alt="WhatsApp Image 2026-06-07 at 4 10 15 PM" src="https://github.com/user-attachments/assets/0547594b-be44-4f0a-917a-7b26366cf04f" />
+<img width="1893" height="831" alt="image" src="https://github.com/user-attachments/assets/d4826c2c-4cd3-4b7f-a641-71c773e89d97" />
 
+The password authentication screen is displayed after successful User ID verification. The user enters the password using the keypad, and the entered password is compared with the password stored in EEPROM. Access proceeds to fingerprint verification only when the password is validated successfully.
 
 
 ---
@@ -244,7 +246,16 @@ Password authentication screen.
 
 Displayed when External Interrupt is pressed.
 
-<img width="1280" height="720" alt="WhatsApp Image 2026-06-07 at 4 21 35 PM" src="https://github.com/user-attachments/assets/46d25777-10ec-41f9-906c-c77f183222f6" />
+<img width="1909" height="824" alt="image" src="https://github.com/user-attachments/assets/f52dad03-b9a9-4a30-ae2c-44bef8d288ea" />
+This screen is displayed when the External Interrupt (INT0) button is pressed. The configuration menu allows the user to manage authentication settings without reprogramming the system.
+
+Available options:
+
+1. EDIT_PASS_FING → Modify the stored password or update fingerprint data.
+2. RESET → Reset authentication settings or stored data.
+3. EXIT → Return to the main authentication screen.
+
+The menu is navigated using the keypad, providing a simple and user-friendly interface for system configuration
 
 
 
@@ -254,8 +265,11 @@ Displayed when External Interrupt is pressed.
 
 Fingerprint registration process.
 
-<img width="1280" height="720" alt="WhatsApp Image 2026-06-07 at 4 13 54 PM" src="https://github.com/user-attachments/assets/118b3bb0-15e6-4d63-8794-8756c8573074" />
+<img width="1916" height="821" alt="image" src="https://github.com/user-attachments/assets/4b7e9084-051b-4f5f-8538-c9db98dac08f" />
 
+This screen is displayed during the fingerprint registration process. The user places a finger on the R305 fingerprint sensor, and the system captures the fingerprint image, generates a template, and stores it in the fingerprint database for future authentication.
+
+The LCD provides guidance throughout the enrollment process and confirms successful fingerprint registration.
 
 ---
 
