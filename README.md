@@ -243,7 +243,8 @@ Password authentication screen.
 
 Displayed when External Interrupt is pressed.
 
-<img width="4000" height="2250" alt="WhatsApp Image 2026-06-07 at 4 05 07 PM" src="https://github.com/user-attachments/assets/dc358387-d709-4ca9-94ca-d9e844cc1e85" />
+<img width="1280" height="720" alt="WhatsApp Image 2026-06-07 at 4 21 35 PM" src="https://github.com/user-attachments/assets/46d25777-10ec-41f9-906c-c77f183222f6" />
+
 
 
 ---
