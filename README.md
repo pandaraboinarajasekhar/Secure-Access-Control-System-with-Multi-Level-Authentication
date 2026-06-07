@@ -277,7 +277,10 @@ The LCD provides guidance throughout the enrollment process and confirms success
 
 Fingerprint matching process.
 
-<img width="1280" height="720" alt="WhatsApp Image 2026-06-07 at 4 17 54 PM" src="https://github.com/user-attachments/assets/a52dc049-20f7-4cf6-ada1-152aa2d23949" />
+<img width="1915" height="821" alt="image" src="https://github.com/user-attachments/assets/8bf6c2ce-41c3-4f8b-8a73-6cccab73d5b1" />
+This screen is displayed during the fingerprint authentication process. After successful User ID and Password verification, the user places a registered finger on the R305 fingerprint sensor. The system captures the fingerprint image, generates a template, and compares it with the stored fingerprint database.
+
+If a matching fingerprint is found, access is granted; otherwise, access is denied.
 
 
 ---
@@ -286,8 +289,11 @@ Fingerprint matching process.
 
 Successful authentication.
 
-<img width="1280" height="720" alt="WhatsApp Image 2026-06-07 at 4 19 03 PM" src="https://github.com/user-attachments/assets/5338d9ca-0d9c-4b71-89b9-fd227bc761f0" />
+<img width="1913" height="822" alt="image" src="https://github.com/user-attachments/assets/b6c74b4f-88fc-4206-9685-5b4b9e76e07d" />
 
+This screen is displayed after successful completion of all three authentication levels: User ID verification, Password verification, and Fingerprint verification.
+
+When a valid user is authenticated, the system grants access and activates the door control mechanism through the motor driver. The LCD confirms successful authentication and indicates that the door has been opened.
 
 ---
 
@@ -296,7 +302,9 @@ Successful authentication.
 Authentication failure.
 
 <img width="1280" height="720" alt="WhatsApp Image 2026-06-07 at 4 23 35 PM" src="https://github.com/user-attachments/assets/c9b193c5-6735-412f-9dc5-3579c8f26076" />
+This screen is displayed when any authentication step fails, including User ID verification, Password verification, or Fingerprint verification. The system denies access to unauthorized users and keeps the door in the locked state.
 
+The LCD notifies the user that authentication has failed and prevents further access until valid credentials are provided.
 
 ---
 
