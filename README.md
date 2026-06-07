@@ -301,7 +301,8 @@ When a valid user is authenticated, the system grants access and activates the d
 
 Authentication failure.
 
-<img width="1280" height="720" alt="WhatsApp Image 2026-06-07 at 4 23 35 PM" src="https://github.com/user-attachments/assets/c9b193c5-6735-412f-9dc5-3579c8f26076" />
+<img width="1914" height="822" alt="image" src="https://github.com/user-attachments/assets/b74dcf11-98ff-4fea-9a33-25cc994e9700" />
+
 This screen is displayed when any authentication step fails, including User ID verification, Password verification, or Fingerprint verification. The system denies access to unauthorized users and keeps the door in the locked state.
 
 The LCD notifies the user that authentication has failed and prevents further access until valid credentials are provided.
