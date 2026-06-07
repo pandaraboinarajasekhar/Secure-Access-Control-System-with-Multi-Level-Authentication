@@ -223,7 +223,8 @@ Displays the project welcome message after power-up.
 
 System waiting for User ID.
 
-<img width="1448" height="1086" alt="image" src="https://github.com/user-attachments/assets/3f93d65c-7335-42fd-bef6-89182a7b4c17" />
+<img width="1280" height="720" alt="WhatsApp Image 2026-06-07 at 4 09 02 PM" src="https://github.com/user-attachments/assets/3f953054-ca54-459a-ac7d-632e6bd1d7f0" />
+
 
 
 ---
@@ -232,7 +233,8 @@ System waiting for User ID.
 
 Password authentication screen.
 
-<img width="1448" height="1086" alt="image" src="https://github.com/user-attachments/assets/1c87a5a5-d507-492e-9e38-cc8c11f9b25a" />
+<img width="1280" height="720" alt="WhatsApp Image 2026-06-07 at 4 10 15 PM" src="https://github.com/user-attachments/assets/0547594b-be44-4f0a-917a-7b26366cf04f" />
+
 
 
 ---
@@ -250,7 +252,8 @@ Displayed when External Interrupt is pressed.
 
 Fingerprint registration process.
 
-![Fingerprint Enrollment](images/fingerprint_enroll.jpg)
+<img width="1280" height="720" alt="WhatsApp Image 2026-06-07 at 4 13 54 PM" src="https://github.com/user-attachments/assets/118b3bb0-15e6-4d63-8794-8756c8573074" />
+
 
 ---
 
@@ -258,7 +261,8 @@ Fingerprint registration process.
 
 Fingerprint matching process.
 
-![Fingerprint Verification](images/fingerprint_verify.jpg)
+<img width="1280" height="720" alt="WhatsApp Image 2026-06-07 at 4 17 54 PM" src="https://github.com/user-attachments/assets/a52dc049-20f7-4cf6-ada1-152aa2d23949" />
+
 
 ---
 
@@ -266,7 +270,8 @@ Fingerprint matching process.
 
 Successful authentication.
 
-![Access Granted](images/access_granted.jpg)
+<img width="1280" height="720" alt="WhatsApp Image 2026-06-07 at 4 19 03 PM" src="https://github.com/user-attachments/assets/5338d9ca-0d9c-4b71-89b9-fd227bc761f0" />
+
 
 ---
 
