@@ -280,7 +280,8 @@ Successful authentication.
 
 Authentication failure.
 
-![Access Denied](images/access_denied.jpg)
+<img width="1280" height="720" alt="WhatsApp Image 2026-06-07 at 4 23 35 PM" src="https://github.com/user-attachments/assets/c9b193c5-6735-412f-9dc5-3579c8f26076" />
+
 
 ---
 
