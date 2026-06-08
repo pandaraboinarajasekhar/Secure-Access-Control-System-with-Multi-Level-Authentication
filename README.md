@@ -149,10 +149,8 @@ When the external interrupt button is pressed, the system enters configuration m
 
 ### Menu Options
 
-```text
 1. Edit Password
 2. Edit Fingerprint
-```
 
 The user can navigate using the keypad.
 
