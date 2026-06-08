@@ -1,0 +1,14 @@
+void edit_finger(void);
+void set_id(void);
+void set_pass(u32);
+int confirm_pass(u32);
+int verify_pass(void);
+int verify_id(void);
+int verify_finger(u32);
+void login(void);
+void Register(void);
+void entry(void);
+void init_idcount(void);
+void edit_all(void);
+void factory_reset(void); 
+void edit_pass_fing(void);

@@ -1,0 +1,3 @@
+#define EINT2_INPUT_PIN 0x0000C000 
+#define EINT2_CHNO 16
+#define EINT2 7
