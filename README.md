@@ -266,7 +266,8 @@ The menu is navigated using the keypad, providing a simple and user-friendly int
 
 Fingerprint registration process.
 
-![Uploading image.png…]()
+<img width="1640" height="959" alt="image" src="https://github.com/user-attachments/assets/7759199e-f4e5-4a28-a00f-8242c89e81eb" />
+
 
 This screen is displayed during the fingerprint registration process. The user places a finger on the R305 fingerprint sensor, and the system captures the fingerprint image, generates a template, and stores it in the fingerprint database for future authentication.
 
