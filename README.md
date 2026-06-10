@@ -212,7 +212,8 @@ The user can:
 
 Displays the project welcome message after power-up.
 
-<img width="1787" height="880" alt="image" src="https://github.com/user-attachments/assets/41d1dc44-f0f0-4a1f-853c-211d6b705047" />
+<img width="1774" height="887" alt="image" src="https://github.com/user-attachments/assets/9c4dd42f-6662-4093-82b3-3060b86b0e47" />
+
 
 
 
