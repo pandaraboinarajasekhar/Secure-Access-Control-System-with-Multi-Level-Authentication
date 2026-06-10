@@ -216,6 +216,7 @@ Displays the project welcome message after power-up.
 
 
 
+
 This screen is displayed immediately after the system is powered ON. It indicates that the LPC2148 microcontroller has successfully initialized all peripherals and that the Secure Access Control System is ready for authentication.
 
 
