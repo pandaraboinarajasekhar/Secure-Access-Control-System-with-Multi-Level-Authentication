@@ -279,7 +279,8 @@ The LCD provides guidance throughout the enrollment process and confirms success
 
 Fingerprint matching process.
 
-<img width="1915" height="821" alt="image" src="https://github.com/user-attachments/assets/8bf6c2ce-41c3-4f8b-8a73-6cccab73d5b1" />
+<img width="1515" height="1038" alt="image" src="https://github.com/user-attachments/assets/f2bba0ff-233b-4448-bc15-f6552b1a022b" />
+
 This screen is displayed during the fingerprint authentication process. After successful User ID and Password verification, the user places a registered finger on the R305 fingerprint sensor. The system captures the fingerprint image, generates a template, and compares it with the stored fingerprint database.
 
 If a matching fingerprint is found, access is granted; otherwise, access is denied.
