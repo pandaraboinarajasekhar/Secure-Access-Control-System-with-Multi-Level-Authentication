@@ -225,7 +225,8 @@ This screen is displayed immediately after the system is powered ON. It indicate
 
 System waiting for User ID.
 
-<img width="1836" height="857" alt="image" src="https://github.com/user-attachments/assets/c031d602-cda7-4d47-ad55-4573b3c8c4da" />
+<img width="1798" height="875" alt="image" src="https://github.com/user-attachments/assets/db90cfcd-2d31-4862-ad2e-7022eb59e335" />
+
 
 The system prompts the user to enter a valid User ID through the keypad as the first level of authentication. The entered ID is verified before proceeding to the password authentication stage. This step helps ensure that only registered users can access the system.
 
