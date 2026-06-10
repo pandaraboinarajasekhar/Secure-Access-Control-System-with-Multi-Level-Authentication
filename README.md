@@ -305,7 +305,8 @@ When a valid user is authenticated, the system grants access and activates the d
 
 Authentication failure.
 
-<img width="1914" height="822" alt="image" src="https://github.com/user-attachments/assets/b74dcf11-98ff-4fea-9a33-25cc994e9700" />
+<img width="1774" height="887" alt="image" src="https://github.com/user-attachments/assets/67bd1df6-8b0f-4ac0-805d-313f9db10bf8" />
+
 
 This screen is displayed when any authentication step fails, including User ID verification, Password verification, or Fingerprint verification. The system denies access to unauthorized users and keeps the door in the locked state.
 
